@@ -1,21 +1,15 @@
-# Compile these files too!
-CORE = core/display.c core/display.h \
-	   core/io.c core/io.h \
-	   core/layout.c core/layout.h
-
-CFLAGS = -Wall -g -static $(shell pkg-config --cflags libevdev)
-LDFLAGS = $(shell pkg-config --libs libevdev)
+CFLAGS = -Wall -g -static
 
 # — Create the main file —————————————————————————————————————————————
-main: Makefile main.c $(CORE)
+main: Makefile main.c
 	rm -f main
-	gcc $(CFLAGS) -o main main.c $(CORE) $(LDFLAGS)
+	gcc $(CFLAGS) -o main main.c
 	chmod +x ./main
 
 # — Create the init file —————————————————————————————————————————————
-init: Makefile init.c main.c $(CORE)
+init: Makefile init.c main.c
 	rm -f ./rootfs/init
-	gcc $(CFLAGS) -DWRAPPED_BUILD -o rootfs/init init.c main.c $(CORE) $(LDFLAGS)
+	gcc $(CFLAGS) -DWRAPPED_BUILD -o rootfs/init init.c main.c $(CORE)
 	chmod +x ./rootfs/init
 
 # — Convenience: run under kitty and pause at end ————————————————————
