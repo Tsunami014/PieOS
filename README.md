@@ -1,5 +1,5 @@
-# TerminalOS2
-A terminal operating system... but in C!
+# Pie OS
+An "operating system" whose sole purpose is to print out all the digits of pi forever
 
 # Dependancies
 ```bash
