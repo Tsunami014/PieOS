@@ -15,15 +15,6 @@ sudo apt install libevdev-dev
 - If you use VSCode, there's a launch configuration setup for this
 - `make test`: Makes the main file into an executable and then runs it in kitty (ensure installed)
 
-## Virtual terminal usage
-I suggest a good way to get a real feel for it without making it it's own OS is to use a virtual terminal.
-
-To use this in the virtual terminal, press <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>F1-12</kbd> and sign in. Then run the script as you would in a normal terminal; `./main` (after `make main`).
-
-I suggest tty1 (<kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>F1</kbd>) as it is the first one and is the most likely to be free (and easiest to remember). And with most systems, tty7 (<kbd>F7</kbd>) is the GUI environment (if not just try every one until one works).
-
-You could even add the script somewhere in the path so you can just open the vt and instantly run the os! (I suggest renaming it to `OS` to be easier)
-
 ## To make into a bootable OS
 - **BUILDING FOR THE FIRST TIME:** `./build`
 - **BUILDING AFTER HAVING DONE IT BEFORE:** `./updateBuild`
