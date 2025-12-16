@@ -1,5 +1,5 @@
 # Pie OS
-An "operating system" whose sole purpose is to print out all the digits of pi forever
+An "operating system" whose sole purpose is to print out all the digits of pi forever in the shape of a pie
 
 # Dependancies
 ```bash
